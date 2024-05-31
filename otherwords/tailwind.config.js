@@ -9,6 +9,12 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    extend: {
+      fontFamily: {
+        'acme': ['Acme', 'sans-serif'],
+        'Anton': ['Anton', 'serif'],
+        
+      },
     container: {
       center: true,
       padding: "2rem",
@@ -16,10 +22,7 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-    extend: {
-      fontFamily: {
-        'acme': ['Acme', 'sans-serif']
-      },
+    
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
