@@ -6,9 +6,18 @@ function Background ({ children }) {
         autoPlay
         loop
         muted
-        style={{position: "absolute", width: "100%", left: "50%", top: "50%", height: "100%", objectFit: "cover", transform: "translate(-50%, -50%)", zIndex: "-1"}}
+        style={{
+          position: "absolute",
+          width: "100%",
+          left: "50%",
+          top: "50%",
+          height: "100%",
+          objectFit: "cover",
+          transform: "translate(-50%, -50%)",
+          zIndex: "-1",
+          pointerEvents: "none" 
+        }}
       />
-      <div style={{position: "absolute", width: "100%", height: "100%", top: "0", left: "0", zIndex: "1"}}></div>
       <div style={{position: "absolute"}}>
         {children}
       </div>
