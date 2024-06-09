@@ -6,6 +6,7 @@ function Background ({ children }) {
         autoPlay
         loop
         muted
+        playsInline
         style={{
           position: "absolute",
           width: "100%",
@@ -17,12 +18,13 @@ function Background ({ children }) {
           zIndex: "-1",
           pointerEvents: "none" 
         }}
+        onClick={(e) => e.preventDefault()}
       />
-      <div style={{position: "absolute"}}>
+      <div style={{position: "absolute", width: "100%", height: "100%"}}>
         {children}
       </div>
     </div>
   );
 }
-  
-  export default Background;
+
+export default Background;
