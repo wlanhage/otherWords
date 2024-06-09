@@ -109,7 +109,7 @@ export default function Game() {
         if (isGamePage) {
             const gameTimer = setTimeout(() => {
                 setIsGamePage(false); 
-            }, 5000);
+            }, 60000);
 
             return () => clearTimeout(gameTimer);
         }
