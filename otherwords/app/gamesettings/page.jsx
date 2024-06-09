@@ -13,21 +13,32 @@ import { CgAdd } from "react-icons/cg";
 export default function Gamesettings() {
     const [teams, setTeams] = useState([{ name: '' }]);
     const [showPopup, setShowPopup] = useState(false);
-    const [language, setLanguage] = useState(() => sessionStorage.getItem('language') || 'english');
+    const [language, setLanguage] = useState('english');
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const savedLanguage = sessionStorage.getItem('language') || 'english';
+            setLanguage(savedLanguage);
+        }
+    }, []);
 
     const addTeam = (newTeam) => {
         setTeams([...teams, newTeam]);
     };
 
     useEffect(() => {
-        teams.forEach((team, index) => {
-            sessionStorage.setItem(`team${index}Name`, team.name);
-        });
+        if (typeof window !== "undefined") {
+            teams.forEach((team, index) => {
+                sessionStorage.setItem(`team${index}Name`, team.name);
+            });
+        }
     }, [teams]);
 
     const handleLanguageChange = (value) => {
         setLanguage(value);
-        sessionStorage.setItem('language', value);
+        if (typeof window !== "undefined") {
+            sessionStorage.setItem('language', value);
+        }
     };
 
     return (
