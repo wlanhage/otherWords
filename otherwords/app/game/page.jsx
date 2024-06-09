@@ -102,7 +102,7 @@ export default function Game() {
         setTimeout(() => {
             generateRandomWord();
             setIsLoading(false);
-        }, 45000);
+        }, 5000);
     };
 
     useEffect(() => {
