@@ -46,8 +46,8 @@ export default function Game() {
     const scorePoints = (points) => {
         setTeams((prevTeams) => {
             const newTeams = [...prevTeams];
-            newTeams[currentTeamIndex].score += points / 2; // Function kept adding 2 points in totalscore
-            return newTeams;                                // Couldnt find solution so Im dividing by 2 before adding score
+            newTeams[currentTeamIndex].score += points; 
+            return newTeams;                                
         });
     };
 
