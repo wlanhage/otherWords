@@ -1,3 +1,5 @@
+"use client";
+
 function Background ({ children }) {
   return (
     <div className="h-screen w-screen relative">
