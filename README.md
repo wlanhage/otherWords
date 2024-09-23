@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a simple project that I would like some contributions to. Feel free to use it for personal or other purposes, modify it, or share it with others.
+This is a simple project, in React/NextJS that I would like some contributions to. Feel free to use it for personal or other purposes, modify it, or share it with others.
 
 ## Usage
 
